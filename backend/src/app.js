@@ -8,9 +8,18 @@ const adminRoutes = require("./routes/adminRoutes");
 
 const app = express();
 
-app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
-}));
+const cors = require("cors");
+
+const allowedOrigins = [
+  process.env.CLIENT_URL,
+  "http://localhost:5173",
+].filter(Boolean);
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {

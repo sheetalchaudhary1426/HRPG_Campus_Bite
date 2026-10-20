@@ -28,10 +28,10 @@ app.get("/", (req, res) => {
   res.json({ message: "CampusBite API is running" });
 });
 
-app.use("/api/auth", authRoutes);
-app.use("/api/menu", menuRoutes);
-app.use("/api/orders", orderRoutes);
-app.use("/api/admin", adminRoutes);
+app.use("/auth", authRoutes);
+app.use("/menu", menuRoutes);
+app.use("/orders", orderRoutes);
+app.use("/admin", adminRoutes);
 
 app.use((req, res) => {
   res.status(404).json({ message: "API route not found" });

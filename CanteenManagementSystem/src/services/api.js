@@ -1,10 +1,6 @@
 const API_BASE_URL = (
   import.meta.env.VITE_API_URL || "https://hrpg-campus-bite.onrender.com"
 ).replace(/\/+$/, "");
-const API_URL = API_BASE_URL.endsWith("/api")
-  ? API_BASE_URL
-  : `${API_BASE_URL}/api`;
-
 export class ApiError extends Error {
   constructor(message, status) {
     super(message);

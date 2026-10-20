@@ -138,7 +138,7 @@ export default function TokenPage() {
               </div>
               <div className={`token-step ${isReady ? "current" : ""}`}>
                 <span>3</span>
-                <div><strong>Collect at the counter</strong><p>Show token {order.tokenNumber} and enjoy your meal.</p></div>
+                <div><strong>Collect at the counter</strong><p>Show token {order.tokenNumber} and enjoy your  meal.</p></div>
               </div>
             </div>
             <Link to="/student/orders" className="text-link token-orders-link">

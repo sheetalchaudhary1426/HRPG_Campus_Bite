@@ -1,5 +1,5 @@
 const API_URL = (
-  import.meta.env.VITE_API_URL || "https://hrpg-campus-bite.onrender.com"
+  import.meta.env.VITE_API_URL || "https://hrpg-campus-bite.onrender.com/api"
 ).replace(/\/+$/, "");
 
 export class ApiError extends Error {

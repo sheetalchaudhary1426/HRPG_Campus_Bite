@@ -1,6 +1,7 @@
-const API_BASE_URL = (
+const API_URL = (
   import.meta.env.VITE_API_URL || "https://hrpg-campus-bite.onrender.com"
 ).replace(/\/+$/, "");
+
 export class ApiError extends Error {
   constructor(message, status) {
     super(message);

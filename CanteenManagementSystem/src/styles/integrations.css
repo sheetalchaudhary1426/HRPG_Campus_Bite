@@ -1,0 +1,144 @@
+.checkout-confirmation {
+  max-width: 680px;
+  margin: 22px auto;
+}
+
+.checkout-confirmation > .panel-heading > svg {
+  color: var(--green);
+  flex: 0 0 auto;
+}
+
+.checkout-order-items {
+  display: grid;
+  gap: 12px;
+  padding: 8px 0 17px;
+  border-bottom: 1px solid var(--line);
+}
+
+.checkout-confirmation .summary-total {
+  margin-top: 15px;
+}
+
+.checkout-confirmation .full-button {
+  width: 100%;
+  margin-top: 10px;
+  background: var(--green);
+  color: white;
+}
+
+.orders-list {
+  display: grid;
+  gap: 13px;
+}
+
+.orders-list .order-card {
+  padding: 20px;
+}
+
+.order-card-heading,
+.order-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.order-card-heading h3 {
+  margin: 5px 0 0;
+  font-size: 17px;
+}
+
+.order-card-items {
+  padding: 13px 0;
+  margin: 14px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.order-card-items p {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 5px 0;
+  color: var(--ink);
+  font-size: 11px;
+}
+
+.order-card-items span,
+.order-card-footer > span {
+  color: var(--muted);
+}
+
+.order-card-footer {
+  font-size: 10px;
+}
+
+.order-card-footer strong {
+  font-size: 13px;
+}
+
+.status-cancelled {
+  color: #a64b42;
+  background: #fbeae8;
+}
+
+.delete-menu-button {
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 7px;
+  padding: 8px;
+  color: #a64b42;
+  background: transparent;
+}
+
+.delete-menu-button:hover:not(:disabled) {
+  background: #fbeae8;
+}
+
+.delete-menu-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin: 12px 0;
+  padding: 11px 13px;
+  border: 1px solid #f1d0ca;
+  border-radius: 8px;
+  color: #963f35;
+  background: #fff4f2;
+  font-size: 11px;
+}
+
+.toast-message {
+  position: fixed;
+  z-index: 20;
+  top: 105px;
+  right: 24px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: white;
+  background: var(--green);
+  box-shadow: var(--shadow);
+  font-size: 11px;
+}
+
+@media (max-width: 560px) {
+  .orders-list .order-card,
+  .checkout-confirmation {
+    padding: 15px;
+  }
+
+  .toast-message {
+    top: 82px;
+    left: 12px;
+    right: 12px;
+    text-align: center;
+  }
+
+  .order-card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

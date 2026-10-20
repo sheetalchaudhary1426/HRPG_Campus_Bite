@@ -1,0 +1,2 @@
+import { Link } from "react-router-dom";
+export default function NotFound() { return <div className="not-found"><span>404</span><h1>Looks like this page took a lunch break.</h1><Link to="/">Back to HRPG Campus Bite</Link></div>; }

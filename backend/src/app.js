@@ -1,6 +1,4 @@
 const express = require("express");
-const cors = require("cors");
-
 const authRoutes = require("./routes/authRoutes");
 const menuRoutes = require("./routes/menuRoutes");
 const orderRoutes = require("./routes/orderRoutes");
@@ -8,16 +6,7 @@ const adminRoutes = require("./routes/adminRoutes");
 
 const app = express();
 
-const allowedOrigins = [
-  process.env.CLIENT_URL,
-  "http://localhost:5173",
-].filter(Boolean);
 
-app.use(
-  cors({
-    origin: allowedOrigins,
-  })
-);
 app.use(express.json());
 
 app.get("/", (req, res) => {
